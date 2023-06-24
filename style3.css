@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    border: 15px solid;
+    border-color: white green white orange;
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./sky.jpg);
+    background-size: cover;
+    background-position:center;
+    position: relative;
+    overflow-x: hidden;
+}
+.toptext{
+    font-size:50px;
+    display: inline-flex;
+    gap: 10px;
+    margin-left:25%;
+    font-weight: bolder;   
+}
+.text1{
+    background-color: orange;
+}
+.text2{
+    background-color: white;
+}
+.text3{
+    background-color: green;
+}
+.highway{
+    height: 200px;
+    width: 500%;
+    display: block;
+    background-image: url(./road.jpg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    animation: move 6s infinite linear;
+}
+@keyframes move{
+    100%{
+        transform: translateX(-3000px);
+    }
+}
+.city{
+    background-image: url(./city.png);
+    width: 500%;
+    height: 250px;
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    animation: move 40s infinite linear;
+}
+.car{
+    width: 400px;
+    left: 50%;
+    bottom: 100px;
+    transform: translatex(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.car img{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+@keyframes car {
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(-1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    } 
+}
+.wheel{
+    left: 50%;
+    bottom: 178px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.wheel img{
+    width: 72px;
+    height: 72px;
+    animation: wheel 1s infinite linear;
+}
+.back-wheel{
+    left: -165px;
+    position: absolute;
+}
+.front-wheel{
+    left: 80px;
+    position: absolute;
+}
+@keyframes wheel{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.sun{
+    width:150px;
+    left: 90%;
+    top: 80px;
+    transform: translatex(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.sun img{
+    width: 100%;
+}
+.flag{
+    width:100px;
+    left: 60%;
+    top: 400px;
+    transform: translatex(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.flag img{
+    width: 100%;
+}
